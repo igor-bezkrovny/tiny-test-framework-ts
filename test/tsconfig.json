@@ -1,0 +1,21 @@
+{
+	"compilerOptions": {
+		"outDir"            : "../dist/test",
+		"module"            : "commonjs",
+		"target"            : "ES5",
+		"inlineSourceMap"   : true,
+		"inlineSources"     : true,
+		"noImplicitAny"     : true,
+		"noEmitOnError"     : true,
+		"preserveConstEnums": true
+	},
+	"files"          : [
+		"test.ts",
+		"../src/assertionStyles/assertionType.ts",
+		"../src/assertionStyles/expect.ts",
+		"../src/operators/baseOperator.ts",
+		"../src/operators/beGreaterThanOperator.ts",
+		"../src/operators/eqOperator.ts",
+		"../src/tiny-test-framework.ts"
+	]
+}

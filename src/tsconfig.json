@@ -1,0 +1,21 @@
+{
+	"compilerOptions": {
+		"outDir"            : "../dist/tiny-test-framework",
+		"module"            : "commonjs",
+		"target"            : "ES5",
+		"inlineSourceMap"   : true,
+		"inlineSources"     : true,
+		"noImplicitAny"     : true,
+		"noEmitOnError"     : true,
+		"preserveConstEnums": true,
+		"declaration" : true
+	},
+	"files"          : [
+		"assertionStyles/assertionType.ts",
+		"assertionStyles/expect.ts",
+		"operators/baseOperator.ts",
+		"operators/beGreaterThanOperator.ts",
+		"operators/eqOperator.ts",
+		"tiny-test-framework.ts"
+	]
+}

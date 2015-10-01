@@ -1,0 +1,41 @@
+'use strict';
+var expect_1 = require('./assertionStyles/expect');
+// Operators
+var eqOperator_1 = require('./operators/eqOperator');
+var beGreaterThanOperator_1 = require('./operators/beGreaterThanOperator');
+/**
+ * Implementation of expect assertion style (function)
+ * @see {@link expect}
+ * @see {@link eq}
+ * @see {@link beGreaterThan}
+ *
+ * @example
+ * ```typescript
+ * console.log(  expect(273).not.to(eq( -273 ))  );
+ * ```
+ */
+function expect(valueToCheck) {
+    return new expect_1.Expect(valueToCheck);
+}
+exports.expect = expect;
+/**
+ * @param {AssertionType} value value to check for equality
+ *
+ * @see {@link expect}
+ * @see {@link beGreaterThan}
+ */
+function eq(value) {
+    return new eqOperator_1.EqOperator(value);
+}
+exports.eq = eq;
+/**
+ * @param {AssertionType} value value to check for being greater
+ *
+ * @see {@link expect}
+ * @see {@link eq}
+ */
+function beGreaterThan(value) {
+    return new beGreaterThanOperator_1.BeGreaterThanOperator(value);
+}
+exports.beGreaterThan = beGreaterThan;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidGlueS10ZXN0LWZyYW1ld29yay5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy90aW55LXRlc3QtZnJhbWV3b3JrLnRzIl0sIm5hbWVzIjpbImV4cGVjdCIsImVxIiwiYmVHcmVhdGVyVGhhbiJdLCJtYXBwaW5ncyI6IkFBQUEsWUFBWSxDQUFDO0FBSWIsdUJBQXVCLDBCQUEwQixDQUFDLENBQUE7QUFFbEQsWUFBWTtBQUNaLDJCQUEyQix3QkFBd0IsQ0FBQyxDQUFBO0FBQ3BELHNDQUFzQyxtQ0FBbUMsQ0FBQyxDQUFBO0FBRTFFOzs7Ozs7Ozs7O0dBVUc7QUFDSCxnQkFBdUIsWUFBNEI7SUFDbERBLE1BQU1BLENBQUNBLElBQUlBLGVBQU1BLENBQUNBLFlBQVlBLENBQUNBLENBQUNBO0FBQ2pDQSxDQUFDQTtBQUZlLGNBQU0sU0FFckIsQ0FBQTtBQUVEOzs7OztHQUtHO0FBQ0gsWUFBbUIsS0FBcUI7SUFDdkNDLE1BQU1BLENBQUNBLElBQUlBLHVCQUFVQSxDQUFDQSxLQUFLQSxDQUFDQSxDQUFDQTtBQUM5QkEsQ0FBQ0E7QUFGZSxVQUFFLEtBRWpCLENBQUE7QUFFRDs7Ozs7R0FLRztBQUNILHVCQUE4QixLQUFxQjtJQUNsREMsTUFBTUEsQ0FBQ0EsSUFBSUEsNkNBQXFCQSxDQUFDQSxLQUFLQSxDQUFDQSxDQUFDQTtBQUN6Q0EsQ0FBQ0E7QUFGZSxxQkFBYSxnQkFFNUIsQ0FBQSIsInNvdXJjZXNDb250ZW50IjpbIid1c2Ugc3RyaWN0JztcclxuXHJcbi8vIEFzc2VydGlvbiB0eXBlc1xyXG5pbXBvcnQgeyBBc3NlcnRpb25UeXBlIH0gZnJvbSAnLi9hc3NlcnRpb25TdHlsZXMvYXNzZXJ0aW9uVHlwZSc7XHJcbmltcG9ydCB7IEV4cGVjdCB9IGZyb20gJy4vYXNzZXJ0aW9uU3R5bGVzL2V4cGVjdCc7XHJcblxyXG4vLyBPcGVyYXRvcnNcclxuaW1wb3J0IHsgRXFPcGVyYXRvciB9IGZyb20gJy4vb3BlcmF0b3JzL2VxT3BlcmF0b3InO1xyXG5pbXBvcnQgeyBCZUdyZWF0ZXJUaGFuT3BlcmF0b3IgfSBmcm9tICcuL29wZXJhdG9ycy9iZUdyZWF0ZXJUaGFuT3BlcmF0b3InO1xyXG5cclxuLyoqXHJcbiAqIEltcGxlbWVudGF0aW9uIG9mIGV4cGVjdCBhc3NlcnRpb24gc3R5bGUgKGZ1bmN0aW9uKVxyXG4gKiBAc2VlIHtAbGluayBleHBlY3R9XHJcbiAqIEBzZWUge0BsaW5rIGVxfVxyXG4gKiBAc2VlIHtAbGluayBiZUdyZWF0ZXJUaGFufVxyXG4gKlxyXG4gKiBAZXhhbXBsZVxyXG4gKiBgYGB0eXBlc2NyaXB0XHJcbiAqIGNvbnNvbGUubG9nKCAgZXhwZWN0KDI3Mykubm90LnRvKGVxKCAtMjczICkpICApO1xyXG4gKiBgYGBcclxuICovXHJcbmV4cG9ydCBmdW5jdGlvbiBleHBlY3QodmFsdWVUb0NoZWNrIDogQXNzZXJ0aW9uVHlwZSkge1xyXG5cdHJldHVybiBuZXcgRXhwZWN0KHZhbHVlVG9DaGVjayk7XHJcbn1cclxuXHJcbi8qKlxyXG4gKiBAcGFyYW0ge0Fzc2VydGlvblR5cGV9IHZhbHVlIHZhbHVlIHRvIGNoZWNrIGZvciBlcXVhbGl0eVxyXG4gKlxyXG4gKiBAc2VlIHtAbGluayBleHBlY3R9XHJcbiAqIEBzZWUge0BsaW5rIGJlR3JlYXRlclRoYW59XHJcbiAqL1xyXG5leHBvcnQgZnVuY3Rpb24gZXEodmFsdWUgOiBBc3NlcnRpb25UeXBlKSB7XHJcblx0cmV0dXJuIG5ldyBFcU9wZXJhdG9yKHZhbHVlKTtcclxufVxyXG5cclxuLyoqXHJcbiAqIEBwYXJhbSB7QXNzZXJ0aW9uVHlwZX0gdmFsdWUgdmFsdWUgdG8gY2hlY2sgZm9yIGJlaW5nIGdyZWF0ZXJcclxuICpcclxuICogQHNlZSB7QGxpbmsgZXhwZWN0fVxyXG4gKiBAc2VlIHtAbGluayBlcX1cclxuICovXHJcbmV4cG9ydCBmdW5jdGlvbiBiZUdyZWF0ZXJUaGFuKHZhbHVlIDogQXNzZXJ0aW9uVHlwZSkge1xyXG5cdHJldHVybiBuZXcgQmVHcmVhdGVyVGhhbk9wZXJhdG9yKHZhbHVlKTtcclxufVxyXG4iXX0=
