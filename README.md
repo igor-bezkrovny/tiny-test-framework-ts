@@ -9,14 +9,18 @@ How To Install
 git clone https://github.com/igor-bezkrovny/tiny-test-framework-ts
 cd tiny-test-framework-ts
 npm install
+```
+
+How To Build Framework and Test
+===============================
+
+```shell
 npm run build
 npm run doc
 ```
 
-> to clean-up project run `npm run clean`
-
-Usage
-=====
+Run Test
+========
 
 ```shell
 npm run test
@@ -28,7 +32,20 @@ or
 node ./dist/test/test/test.js
 ```
 
-> Example test can be located at `test`. Please do `npm run build` on every test change 
+> Example test can be located at the `test` folder. Please do `npm run build` on every test change 
+
+How To Build Documentation
+==========================
+
+```shell
+npm run doc
+```
+
+> documentation will be created in the `doc` folder
+
+How To Cleanup
+==============
+> to clean-up project run `npm run clean`
 
 License
 =======
