@@ -1,5 +1,7 @@
 tiny-test-framework
 ===================
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/ibezkrovnyi/tiny-test-framework-ts.svg)](https://greenkeeper.io/)
 Tiny Test Framework (TypeScript) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 How To Install
